@@ -1,0 +1,29 @@
+name: ArgusRoadAlert
+options:
+  bundleIdPrefix: com.argus
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  ArgusRoadAlert:
+    type: application
+    platform: iOS
+    sources: [ArgusRoadAlert]
+    info:
+      path: ArgusRoadAlert/Info.plist
+      properties:
+        CFBundleDisplayName: Argus Road Alert
+        UILaunchScreen: {}
+        UIUserInterfaceStyle: Dark
+        UIBackgroundModes: [location, audio]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSLocationWhenInUseUsageDescription: Argus needs your location to warn you about cameras ahead.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Argus needs background location to keep warning you while another navigation app is open.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.argus.roadalert
+        TARGETED_DEVICE_FAMILY: "1"
